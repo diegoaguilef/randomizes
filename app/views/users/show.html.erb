@@ -1,0 +1,45 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header text-center">
+			<h4>Información de Usuario</h4>
+		</div>
+		<div class="card-body">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Columna</th>
+						<th>Dato</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Nombre:</td>
+						<td><%= @user.name %></td>
+					</tr>
+					<tr>
+						<td>Edad</td>
+						<td><%= @user.age %></td>
+					</tr>
+					<tr>
+						<td>Teléfono</td>
+						<td>+<%= @user.cell_phone %></td>
+					</tr>
+					<tr>
+						<td>Fecha Nacimiento</td>
+						<td><%= @user.birth_date %></td>
+					</tr>
+					<tr>
+						<td>Fecha Creación</td>
+						<td><%= @user.created_at %></td>
+					</tr>
+					<tr>
+						<td>Fecha Actualización</td>
+						<td><%= @user.updated_at %></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+</div>
+<%= link_to 'Listado de Usuarios', users_path, class: 'btn btn-primary' %>
+<%= link_to 'Editar Usuario', edit_user_path(@user), class: 'btn btn-primary' %>
+</div>

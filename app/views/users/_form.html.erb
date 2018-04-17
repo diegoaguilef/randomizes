@@ -1,0 +1,47 @@
+<%= form_for @user do |f| %>
+<% errors = @user.errors %>
+<div class="row form-group">
+	<div class="col-2">
+		<%= f.label :name, 'Nombre' %>
+	</div>
+	<div class="col-6">
+		<%= f.text_field :name, class: 'form-control' %>
+		<span class="badge badge-danger"><%= errors[:name].join('').humanize %></span>
+	</div>
+</div>
+<div class="row form-group">
+	<div class="col-2">
+		<%= f.label :age, 'Edad' %>
+	</div>
+	<div class="col-6">
+	<%= f.number_field :age, class: 'form-control' %>
+	<span class="badge badge-danger"><%= errors[:age].join('').humanize %></span>
+	</div>
+</div>
+<div class="row form-group">
+	<div class="col-2">
+		<%= f.label :birth_date, 'Fecha Nacimiento' %>
+	</div>
+	<div class="col-6">
+	<%= f.text_field :birth_date, class: 'form-control' %>
+	<span class="badge badge-danger"><%= errors[:birth_date].join('').humanize %></span>
+	</div>
+</div>
+<div class="row form-group">
+	<div class="col-2">
+		<%= f.label :cell_phone, 'Teléfono' %>
+	</div>
+	<div class="col-6">
+	<%= f.number_field :cell_phone, class: 'form-control' %>
+	<span class="badge badge-danger"><%= errors[:cell_phone].join('').humanize %></span>
+	</div>
+</div>
+<div class="row">
+	<div class="col-3">
+		<%= f.submit (params[:action].include?('new') || params[:action].include?('create') ? 'Crear Usuario' : 'Editar Usuario') , class: 'btn btn-success'%>
+	</div>
+</div>
+<% end -%>
+<script type="text/javascript">
+	$('#user_brith_date').datepicker()
+</script>

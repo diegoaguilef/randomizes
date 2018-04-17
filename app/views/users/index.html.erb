@@ -1,0 +1,60 @@
+<div class="card">
+	<div class="card-header text-center">
+		<h4 class="text-center"> Listado de Usuarios </h4>
+	</div>
+	<div class="card-body">
+		<div class="row">
+			<div class="col-9 col-centered">
+				<table class="table">
+					<thead class="thead-dark">
+						<tr>
+							<th>Nombre</th>
+							<th>Edad</th>
+							<th>Teléfono</th>
+							<th>Fecha Nacimiento</th>
+							<th>Fecha Creación</th>
+							<th>Fecha Actualización</th>
+							<th>Acciones</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @users.each do |user| %>
+						<tr>
+							<td><%= user.name %></td>
+							<td><%= user.age %></td>
+							<td><%= user.cell_phone %></td>
+							<td><%= user.birth_date %></td>
+							<td><%= user.created_at %></td>
+							<td><%= user.updated_at %></td>
+							<td>
+								<div class="btn-group" role="group" aria-label="Basic example">
+								<%= link_to "Ver  #{octicon "eye", class:'align-middle'} ".html_safe, user_path(user), class: 'btn btn-success btn-sm' %>
+								<%= link_to "Editar  #{octicon 'pencil', class:'align-middle'} ".html_safe, edit_user_path(user), class: 'btn btn-warning btn-sm' %>
+								<%= link_to "Eliminar #{octicon 'x', class:'align-middle'} ".html_safe, user_path(user), method: :delete, data: { confirm: 'Estás seguro de Eliminar' },class: 'btn btn-danger btn-sm' %>
+								</div>
+							</td>
+						</tr>
+						<% end -%>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th>Nombre</th>
+							<th>Edad</th>
+							<th>Teléfono</th>
+							<th>Fecha Nacimiento</th>
+							<th>Fecha Creación</th>
+							<th>Fecha Actualización</th>
+							<th>Acciones</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-2 col-centered">
+				<%= link_to 'Nuevo Usuario', new_user_path, class: 'btn btn-success'%>
+			</div>
+		</div>
+	</div>
+</div>
+
