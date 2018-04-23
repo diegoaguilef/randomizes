@@ -14,8 +14,10 @@ default: &default
   port: 5432
 
 development:
-  <<: *default
-  password: 0d76568055d38cb0cd8b9063584d567e7a4c3cfcd3d7395d9d56c9ee9ba43e86
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
