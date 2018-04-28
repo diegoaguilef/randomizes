@@ -17,8 +17,8 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
-//= require bootstrap-datepicker
-//= require inputmask/dist/inputmask/jquery.inputmask
-//= require inputmask/dist/inputmask/inputmask.phone.extensions
-//= require inputmask/dist/inputmask/phone-codes/phone
+//= require moment
+//= require moment/es
+//= require bootstrap4-datetimepicker/build/js/bootstrap-datetimepicker.min
+//= require jquery.mask
 

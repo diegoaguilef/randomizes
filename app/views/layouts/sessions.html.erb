@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="awesome webpage">
+    <meta name="author" content="Diego AAAAAAAAAAIguilef">
     <title>Myapp</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'login' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'login' %>
   </head>
-<body>
-<div class="container">
-    <div class="card card-container">
-        <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-        <p id="profile-name" class="profile-name-card"></p>
-        <%= yield %>
+<body class="bg-dark">
+  <div class="container">
+    <% card_type = controller_name.include?('sessions') ? 'login' : 'register' %>
+    <div class="card card-<%= card_type %> mx-auto mt-5">    
+      <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+      <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+      <p id="profile-name" class="profile-name-card"></p>
+      <%= yield %>
+      <div class="form-group">
+        <div class="form-row">
+          <div class="col-md-6">
+            <%= render "users/shared/links" %>
+          </div>
+        </div>
+      </div>
     </div><!-- /card-container -->
-</div><!-- /container -->
+  </div><!-- /container -->
 </body>
 </html>

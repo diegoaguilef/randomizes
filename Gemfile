@@ -14,6 +14,7 @@ gem 'pg'
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'sprockets-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -37,9 +38,11 @@ gem "font-awesome-rails"
 gem 'octicons'
 gem 'octicons_helper'
 gem 'jekyll-octicons'
-gem 'bootstrap-datepicker-rails'
+gem 'momentjs-rails', '>= 2.9.0'
 gem 'devise'
 gem 'bcrypt', platforms: [:ruby]
+gem 'jquery_mask_rails'
+gem "autoprefixer-rails"
 group :development, :test do
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
