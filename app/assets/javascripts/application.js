@@ -22,6 +22,5 @@
 //= require bootstrap4-datetimepicker/build/js/bootstrap-datetimepicker.min
 //= require jquery.mask
 //= require jquery.easing
-//= require Chart.js/dist/Chart
 //= require datatables.net/js/jquery.dataTables
 //= require datatables.net-bs4/js/dataTables.bootstrap4
