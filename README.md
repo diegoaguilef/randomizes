@@ -5,19 +5,23 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version : 2.4
 
-* System dependencies
+* System dependencies: npm & ruby gems
 
-* Configuration
+* Configuration: back & front-end build 
 
-* Database creation
+* Database creation: rake db:create
 
-* Database initialization
+* Database initialization: heroku instance!
 
-* How to run the test suite
+* How to run:
+ - npm install
+ - bundle install
+ - rake db:migrate
+ - rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+* Services
 
 * Deployment instructions
 
