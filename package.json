@@ -2,6 +2,8 @@
   "name": "myapp",
   "private": true,
   "dependencies": {
+    "datatables.net": "^1.10.16",
+    "datatables.net-bs4": "^1.10.16",
     "inputmask": "^3.3.11"
   }
 }
