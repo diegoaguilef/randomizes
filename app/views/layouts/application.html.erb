@@ -48,6 +48,7 @@
         	<%= link_to "#{fa_icon 'home fw'}Inicio".html_safe, home_index_path %>
         </li>
         <%= content_tag(:li, "#{fa_icon 'fw keyboard-o'}Chat".html_safe, class: 'breadcrumb-item active') if action_name.include?('chat') %>
+        <%= content_tag(:li, "#{fa_icon 'fw gift'}RandomPage".html_safe, class: 'breadcrumb-item active') if action_name.include?('random') %>
       </ol>
 			<%= yield %>
 			<footer class="sticky-footer">

@@ -1,0 +1,38 @@
+<div class="container">
+	<div class="card">
+		<div class="card-header">
+			<h3 class="text-center"> ¡ Lista de comentarios ! </h3>
+		</div>
+		<div class="card-body">
+			<div class="row">
+				<div class="col-3">
+					<%= link_to "#{fa_icon 'fw plus'} Nuevo Comentario! ".html_safe, 'javascript:void(0)',
+					    class: 'btn btn-success',
+					    role: 'button',
+					    'data-toggle': 'modal',
+					    'data-target': '#post_modal' %>
+				</div>
+			</div>
+			<%= render template: '/posts/index' %>
+		</div>
+	</div>
+</div>
+<div class="modal fade" id="post_modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">Ingresar Comentario</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render template: '/posts/new' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+      </div>
+    </div>
+  </div>
+</div>

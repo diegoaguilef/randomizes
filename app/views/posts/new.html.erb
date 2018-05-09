@@ -1,0 +1,13 @@
+<%= form_for @post, html: { remote: true, 'onSubmit': '$("#post_modal").modal("hide")' } do |f| %>
+<div class="row form-group">
+	<div class="col">
+		<%= f.label :comment, 'Comentario' %>
+		<%= f.text_area :comment, class: 'form-control', col: 40, row:3 %>
+	</div>
+</div>
+<div class="row form-group">
+	<div class="col col-centered">
+		<%= f.submit 'Crear Comentario', class: 'btn btn-success'%>
+	</div>
+</div>
+<% end %>

@@ -3,5 +3,7 @@ class HomeController < ApplicationController
   end
 
   def random
+  	@posts = Post.all
+  	@post = Post.new
   end
 end
