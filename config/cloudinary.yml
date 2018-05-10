@@ -1,0 +1,12 @@
+production:
+  cloud_name: "kdieogoxdev"
+  api_key: "371589411746274"
+  api_secret: "CoP-5GHh3GsDHXN-qdBYGZiXc08"
+  secure: true
+  cdn_subdomain: true
+development:
+  cloud_name: "kdieogoxdev"
+  api_key: "371589411746274"
+  api_secret: "CoP-5GHh3GsDHXN-qdBYGZiXc08"
+  secure: true
+  cdn_subdomain: true

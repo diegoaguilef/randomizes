@@ -46,6 +46,7 @@ gem "autoprefixer-rails"
 gem "rolify"
 gem 'jquery-easing-rails'
 gem 'redis'
+gem 'cloudinary', '~> 1.9', '>= 1.9.1'
 group :development, :test do
   gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

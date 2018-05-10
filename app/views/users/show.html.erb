@@ -22,7 +22,7 @@
 					</tr>
 					<tr>
 						<td>Teléfono</td>
-						<td>+<%= @user.cell_phone %></td>
+						<td><%= @user.cell_phone %></td>
 					</tr>
 					<tr>
 						<td>Fecha Nacimiento</td>
@@ -38,8 +38,9 @@
 					</tr>
 				</tbody>
 			</table>
+			<%= image_tag(JSON.parse(@user.cl_image_props)['url'], class: 'avatar large-avatar', width: 500, height: 500) unless @user.cl_image_props.nil? %>
 		</div>
 </div>
-<%= link_to 'Listado de Usuarios', users_path, class: 'btn btn-primary' %>
+<% link_to 'Listado de Usuarios', users_path, class: 'btn btn-primary' %>
 <%= link_to 'Editar Usuario', edit_user_path(@user), class: 'btn btn-primary' %>
 </div>

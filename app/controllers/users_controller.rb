@@ -43,7 +43,10 @@ class UsersController < ApplicationController
 
   def update
     respond_to do |format|
-      if @user.update(user_params)
+      u_params = user_params.as_json
+      image_params = params[:user][:cl_image_props]
+      u_params[:cl_image_props] = @user.set_user_image_props(image_params) if image_params.present?
+      if @user.update(u_params)
         format.html {render :show}
         format.json {render json: @user}
       else
@@ -60,7 +63,7 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit(:name,:age,:birth_date, :cell_phone)
+    params.require(:user).permit( :username, :email, :name,:age,:birth_date, :cell_phone, :cl_image_props)
   end
 
 end
