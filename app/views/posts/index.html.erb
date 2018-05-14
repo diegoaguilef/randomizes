@@ -2,7 +2,7 @@
 <ul id="posts_list">
 	<% @posts.each do |post| %>
 	<li class="mb-3 mt-3">
-		<%= image_tag(JSON.parse(post.user.cl_image_props)['url'], class: 'avatar') unless post.user.cl_image_props.nil? %>
+		<%= image_tag(post.user.cl_image_props, class: 'avatar') unless post.user.cl_image_props.nil? %>
 		<%= post.user.name %> : <%= post.comment %></li> 
 	<% end %>
 </ul>

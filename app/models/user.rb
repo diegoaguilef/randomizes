@@ -38,8 +38,8 @@ class User < ApplicationRecord
         {:width => 260, :height => 200, :crop => :crop, :gravity => :north}
       ]
     }
-    cl_image_props = Cloudinary::Uploader.upload(image_params.tempfile.path, cl_options)
-    cl_image_props.to_json
+    cl_image_url = Cloudinary::Uploader.upload(image_params.tempfile.path, cl_options)['url']
+    cl_image_url
   end
 
   protected

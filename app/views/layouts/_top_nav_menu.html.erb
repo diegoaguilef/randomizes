@@ -79,7 +79,7 @@
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle mr-lg-2" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <% if current_user.cl_image_props %>
-        <%= image_tag(JSON.parse(current_user.cl_image_props)['url'], class: 'avatar', alr: 'user') %>
+        <%= image_tag(current_user.cl_image_props, class: 'avatar', alr: 'user') %>
       <%else%>
         <i class="fa fa-fw fa-user-circle-o"></i>
       <%end%>
