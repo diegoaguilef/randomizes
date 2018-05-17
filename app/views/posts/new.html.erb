@@ -1,13 +1,17 @@
-<%= form_for @post, html: { remote: true, 'onSubmit': '$("#post_modal").modal("hide")' } do |f| %>
-<div class="row form-group">
-	<div class="col">
-		<%= f.label :comment, 'Comentario' %>
-		<%= f.text_area :comment, class: 'form-control', col: 40, row:3 %>
-	</div>
-</div>
-<div class="row form-group">
-	<div class="col col-centered">
-		<%= f.submit 'Crear Comentario', class: 'btn btn-success'%>
+<%= form_for @post, html: { remote: true, 'onSubmit': 'postPostsProcess()', class: 'form-inline' } do |f| %>
+<div class="form-row">
+	<div class="input-group" style= 'width: 0 auto;'>
+		<%= f.text_area :comment, class: 'form-control' %>
+		<div class="input-group-append">
+			<%= button_tag class: 'btn btn-primary' do %>
+			<%= fa_icon 'paper-plane', 'aria-hidden': true %>
+			<% end -%>
+		</div>
 	</div>
 </div>
 <% end %>
+<script type="text/javascript">
+	function postPostsProcess(){
+		$('textareas')
+	}
+</script>

@@ -39,8 +39,8 @@ gem 'octicons'
 gem 'octicons_helper'
 gem 'jekyll-octicons'
 gem 'momentjs-rails', '>= 2.9.0'
+gem 'bcrypt'
 gem 'devise'
-gem 'bcrypt', platforms: [:ruby]
 gem 'jquery_mask_rails'
 gem "autoprefixer-rails"
 gem "rolify"
