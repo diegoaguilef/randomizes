@@ -6,7 +6,8 @@
 		<% @posts.each do |post| %>
 		<li class="mb-3 mt-3">
 			<%= image_tag(post.user.cl_image_props, class: 'avatar') unless post.user.cl_image_props.nil? %>
-			<%= post.user.name %> : <%= post.comment %>			
+			<%= post.user.name %> : <%= post.comment %>	<br>
+			<small><%= link_to 'Eliminar', post_path(post), metho: :delete%></small>		
 		</li> 
 		<% end %>
 	</ul>
