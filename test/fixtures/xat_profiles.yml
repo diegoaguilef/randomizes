@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  nick: MyString
+  age: 1
+  xat_id: 1
+  photos: 
+
+two:
+  name: MyString
+  nick: MyString
+  age: 1
+  xat_id: 1
+  photos: 

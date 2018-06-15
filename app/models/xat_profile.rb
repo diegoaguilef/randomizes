@@ -1,0 +1,2 @@
+class XatProfile < ApplicationRecord
+end
